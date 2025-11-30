@@ -1,0 +1,65 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Latar belakang gradasi gelap (Deep Space) */
+    background: radial-gradient(circle at center, #1a2a6c, #b21f1f, #fdbb2d); 
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif; /* Pakai font keren tadi */
+    color: white;
+    overflow: hidden; /* Hilangkan scrollbar */
+}
+
+.game-wrapper {
+    text-align: center;
+    /* Efek muncul perlahan (animasi) */
+    animation: fadeIn 1.5s ease-in;
+}
+
+.game-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00f2ff; /* Warna Cyan Neon */
+    text-shadow: 0 0 20px #00f2ff; /* Efek cahaya teks */
+    letter-spacing: 5px;
+}
+
+canvas {
+    background-color: #000;
+    /* BINGKAI NEON BERSINAR */
+    box-shadow: 0 0 20px #00f2ff, 0 0 50px rgba(0, 242, 255, 0.5);
+    border: 2px solid #00f2ff;
+    border-radius: 10px; /* Sudut agak melengkung dikit */
+    display: block;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.2rem;
+    color: #ccc;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.controls span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animasi Masuk */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
